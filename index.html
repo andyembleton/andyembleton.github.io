@@ -1,17 +1,697 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ENLIVEN-UK clinical trial</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
 
-  <title>ENLIVEN-UK clinical trial</title>
-  <meta name="description" content="A website for the ENLIVEN-UK clinical trial">
-  <meta name="author" content="Andrew Embleton-Thirsk">
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
 
-  <script data-goatcounter="https://andyembleton.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-</head>
+		<script data-goatcounter="https://andyembleton.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-<body>
-  ENLIVEN-UK clinical trial
-</body>
-</html>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/logo-whitespace.jpg" alt="ENLIVEN-UK logo of two cupped hands inside a brain" /></span>
+					<h1 id="logo"><a href="#">ENLIVEN-UK</a></h1>
+					<p>Endoscopic Lavage after Intraventricular Haemorrhage in Neonates in the UK</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#outline" class="active">Outline</a></li>
+						<li><a href="#details">Key aspects</a></li>
+						<li><a href="#information">Information</a></li>
+						<li><a href="#pis">PIS</a></li>
+						<li><a href="#team">Team</a></li>
+						<li><a href="#sites">Sites</a></li>
+						<li><a href="#recruitment">Recruitment</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="#trial-info">Trial information</a></li>
+						<li><a href="#healthcare-prof">Healthcare Professionals</a></li>
+					</ul>
+				</nav>
+				<!-- <footer>
+					<ul class="icons">
+						<li><a href="https://www.twitter.com" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer> -->
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- outline -->
+							<section id="outline">
+								<div class="image main" data-position="center">
+									<img src="images/banner.jpg" alt="Illustrative picture of surgery being performed" />
+								</div>
+								<div class="container">
+									<header class="major">
+										<h2>ENLIVEN-UK</h2>
+										<p>Endoscopic Lavage after Intraventricular Haemorrhage in Neonates in the UK</p>
+									</header>
+									<p>A national randomised controlled trial on the efficacy of neuro-endoscopic lavage</p>
+								</div>
+							</section>
+
+						<!-- details -->
+							<section id="details">
+								<div class="container">
+									<h3>Key aspects of the Trial</h3>
+									<!-- <p>Key aspects of the ENLIVEN-UK trial:</p> -->
+									<ul class="feature-icons">
+										<li class="icon solid fa-notes-medical">Phase III, multi-centre, assessor-blinded, randomised controlled interventional trial</li>
+										<li class="icon solid fa-users">In preterm infants with post-haemorrhagic Ventricular Dilatation (PHVD)</li>
+
+										<li class="icon solid fa-brain">Intervention: <em>Neuroendoscopic lavage (NEL) with temporising device</em></li>
+										<li class="icon solid fa-brain">Control: <em>Temporising device alone</em></li>
+
+										<li class="icon solid fa-laptop-medical">Aiming to recruit 100 infants</li>
+										<li class="icon solid fa-hourglass-start">Recruiting for approximately 3 years – <em>not open to recruitment yet</em></li>
+
+										<li class="icon solid fa-cubes">Design includes an internal pilot study assessing recruitment feasibility, barriers to recruitment and protocol adherence </li>
+										<li class="icon solid fa-paperclip">Protocol paper published in <a href="https://doi.org/10.1007/s00381-022-05632-2" target="_blank"><em>Child's Nervous System</em></a> journal</li>
+
+										<li class="icon solid fa-file-signature">Previous called <em>DOLPHIN-UK</em></li>
+									</ul>
+								</div>
+							</section>
+
+							<!-- summary -->
+								<section id="information">
+									<div class="container">
+										<h3>Information for parents and guardians</h3>
+
+											<p>Around one in thirteen babies is born preterm in the United Kingdom. Despite major advances in survival, intraventricular haemorrhage (IVH) remains one of the most serious complications of preterm birth. Intraventricular haemorrhage (IVH) is bleeding into the fluid spaces of the brain and is common in babies who are born premature. This results in a build-up of brain fluid, that may increase the pressure in the brain. Bleeding in the brain can cause a risk to life and also cause problems with vision, hearing, cognition (understanding) and motor function (movement).</p>
+
+											<p>The current best treatment available involves implanting a temporary drainage device in a short operation. There is a new treatment called neuroendoscopic lavage (NEL), which involves the insertion of a small camera into the fluid spaces (ventricles) of the brain to wash out as much of the blood as possible before inserting the temporary drainage tube.</p>
+
+											<p><em>ENLIVEN-UK</em> will investigate whether the addition of NEL to the standard procedure of inserting a temporary cerebrospinal fluid (CSF) drainage device will improve children's development at 2 year's of age.</p>
+
+											<p>The trial aims to recruit 100 babies from paediatric neurosurgical units across the UK. <em>ENLIVEN-UK</em> is taking place between March 2023 and February 2029. Recruitment will start in March 2024. The <em>ENLIVEN-UK</em> trial was designed by NHS clinicians and has been reviewed and authorised by an independent Research Ethics Committee. University College London is the Sponsor for the trial and the trial is managed by the Comprehensive Clinical Trials Unit at UCL. The Chief Investigators are Mr Kristian Aquilina (Consultant Paediatric Neurosurgeon, Great Ormond Street Hospital) and Mr Conor Mallucci (Consultant Paediatric Neurosurgeon, Alder Hey Children&rsquo;s Hospital).</p>
+
+											<p>Please watch this short video if you are interested in finding out more about the trial:</p>
+                      <iframe src="https://drive.google.com/file/d/1cR63u8_hxzP4EMEtm8a9z9Bs2mCG5FpB/preview" width="640" height="480" style="border: 1px solid #777;"></iframe>
+
+									</div>
+								</section>
+
+
+								<!-- PIS -->
+									<section id="pis">
+										<div class="container">
+											<h3>Patient Information Sheet</h3>
+
+												<p>You can read more about the trial in the Patient Information Sheet: <br>
+												<a href="https://liveuclac-my.sharepoint.com/:b:/g/personal/rmjlaem_ucl_ac_uk/EfW4I0LAL1NDrkN6blLYEpUB_WM4q0R0k3KUxJGcV37HaQ?e=QEqVQ7" target="_blank"><em>ENLIVEN-UK</em> PIS v2.0 08December2023 -non-localised</a></p>
+
+										</div>
+									</section>
+
+										<!--
+										<section>
+											<h4>Text</h4>
+											<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+											This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+											This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+											<hr />
+											<header>
+												<h4>Heading with a Subtitle</h4>
+												<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+											</header>
+											<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+											<header>
+												<h5>Heading with a Subtitle</h5>
+												<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+											</header>
+											<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+											<hr />
+											<h2>Heading Level 2</h2>
+											<h3>Heading Level 3</h3>
+											<h4>Heading Level 4</h4>
+											<h5>Heading Level 5</h5>
+											<h6>Heading Level 6</h6>
+											<hr />
+											<h5>Blockquote</h5>
+											<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+										</section>
+									-->
+
+						<!-- team -->
+							<section id="team">
+								<div class="container">
+									<h3>Team and Collaborators</h3>
+									<div class="features">
+										<article>
+											<a href="https://www.gosh.nhs.uk/our-people/staff-z/kristian-aquilina/" target="_blank" class="image"><img src="images/ci.png" alt="A picture of the Chief Investigator, Mr Kristian Aquilina, facing the camera" /></a>
+											<div class="inner">
+												<h4>Chief Investigator</h4>
+												<p><a href="https://www.gosh.nhs.uk/our-people/staff-z/kristian-aquilina/" target="_blank">Mr Kristian Aquilina</a> FRCS(SN) MD has been surgical lead for neuro-oncology at GOSH since 2012, and is an honorary senior lecturer at the UCL Institute of Child Health. Kristian graduated from the University of Malta in 1995 and completed his neurosurgical training in Bristol in 2009. He completed a one-year clinical fellowship in paediatric neurosurgery, and particularly in paediatric neuro-oncology, at St Jude Children's Research Hospital in Memphis, Tennessee. Kristian was appointed Consultant Neurosurgeon in Bristol in 2010, and Consultant Paediatric Neurosurgeon at GOSH in June 2012.<br>
+                        Kristian's principal research interests include brain tumours in children, particularly in relation to clinical outcomes and imaging, intraventricular haemorrhage in preterm babies, hydrocephalus, and the outcomes of selective dorsal rhizotomy for spasticity in children with cerebral palsy.<br>
+												Contact using: <a href="mailto:kristian.aquilina@gosh.nhs.uk">kristian.aquilina@gosh.nhs.uk</a>
+												</p>
+											</div>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/coci.png" alt="" /></a>
+											<div class="inner">
+												<h4>Co-Chief Investigator</h4>
+												<p>
+                          Senior Paediatric Neurosurgery Consultant, Alder Hey Children's NHS foundation trust, Liverpool, since 1998. Conor Mallucci qualified in London at University College in 1989. He underwent neurosurgery training in Birmingham, Nottingham and then Paris.<br>
+                          He is committed to improving outcomes in children with brain tumours and hydrocephalus. He has been chairman of the British Paediatric Neurosurgery Group and chaired their research group for over 10 years. He was deputy editor of the British Journal of Neurosurgery for over 10 years.<br>
+                          He has published extensively on brain tumours, hydrocephalus and neuroendoscopy. He has 178 publications in international peer reviewed journals, edited an international textbook on CSF disorders and written over 18 book chapters. He has over £10 million of NIHR/Grant funding awards with a particular interest in multi-centre randomised controlled trials and evidence-based medicine.<br>
+											</div>
+										</article>
+										<article>
+											<a href="https://www.ucl.ac.uk/comprehensive-clinical-trials-unit/" target="_blank" class="image"><img src="images/ucl.jpg" alt="UCL Front Quad and Wilkins Building" /></a>
+											<div class="inner">
+												<h4>Clinical Trials Unit / Sponsor</h4>
+												<p>The <a href="https://www.ucl.ac.uk/comprehensive-clinical-trials-unit/" target="_blank">Comprehensive Clinical Trials Unit at UCL</a> (CCTU) is the coordinating CTU, with UCL as the sponsor.</p>
+											</div>
+										</article>
+                      <h4>Collaborators</h4>
+                    <p>
+                      Dr Hakim-Moulay Dehbi, Senior Statistician, University College London<br>
+                      Mr Aswin Chari, Clinical Lecturer in Neurosurgery, GOSH - UCL<br>
+                      Ms Monica Panca, Senior Health Economist, University College London<br>
+                      Dr Cristine Sortica da Costa, Consultant Neonatologist, GOSH – UCL<br>
+                      Professor Andrew Whitelaw, Emeritus Professor of neonatology, University of Bristol<br>
+                      Mr Greg James, Consultant Paediatric Neurosurgeon, GOSH<br>
+                      Dr Cheryl Battersby, Clinical Senior Lecturer and Honorary Consultant Neonatologist, Imperial College London<br>
+                      Dr Sally Jary, Honorary Researcher, University of Bristol<br>
+                      Professor Neil Marlow, Emeritus Professor of Neonatal Medicine, University College London<br>
+                      Mr William Dawes, Consultant Neurosurgeon, Royal London Hospital<br>
+                      Laurence Galland, Patient group representative
+                    </p>
+									</div>
+								</div>
+							</section>
+
+							<!-- Four -->
+								<section id="sites">
+									<div class="container">
+									<h3>List of Site Contacts</h3>
+									<p>If you have questions about the study please contact your baby's study team at:</p>
+									<h4>Great Ormond Street Hospital, London</h4>
+									<p>Mr Kristian Aquilina: <a href="mailto:kristian.aquilina@gosh.nhs.uk">kristian.aquilina@gosh.nhs.uk</a></p>
+									<h4>Alder Hey Children's Hospital, Liverpool</h4>
+									<p>Ms Benedetta Pettorini: <a href="mailto:benedetta.pettorini@alderhey.nhs.uk">benedetta.pettorini@alderhey.nhs.uk</a></p>
+							    <div id="map"></div>
+									<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+									<script>
+										const map = L.map('map', {
+										  center: [53.252,-1.252],
+										  zoom: 6,
+											scrollWheelZoom:false
+										});
+										L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+										const marker1 = L.marker([51.522090, -0.119933]).bindPopup('Great Ormond Street Hospital (GOSH)').addTo(map);
+										const marker2 = L.marker([53.41951, -2.89694]).bindPopup('Alder Hey Children’s Hospital').addTo(map);
+										marker1._icon.style.filter = "hue-rotate(313deg)"
+										marker2._icon.style.filter = "hue-rotate(313deg)"
+									</script>
+									</div>
+								</section>
+
+
+            <!-- Recruitment -->
+							<section id="recruitment">
+								<div class="container">
+									<h3>Recruitment</h3>
+									<p>
+                    Sites open to recruitment: 0<br>
+                    Participants recruited: 0<br>
+                    (Last updated 08-May-2024)
+									</p>
+									<!-- <form method="post" action="#">
+										<div class="row gtr-uniform">
+											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
+											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" class="primary" value="Send Message" /></li>
+													<li><input type="reset" value="Reset Form" /></li>
+												</ul>
+											</div>
+										</div>
+									</form> -->
+								</div>
+							</section>
+
+						<!-- Contact -->
+							<section id="contact">
+								<div class="container">
+									<h3>Contact us</h3>
+									<p>
+										<b><em>ENLIVEN-UK</em> Management Office:</b><br>
+										Comprehensive Clinical Trials Unit at UCL<br>
+										Institute of Clinical Trials & Methodology<br>
+										90 High Holborn, London, WC1V 6LJ<br>
+										<a href="mailto:cctu.enlivenuk@ucl.ac.uk">cctu.enlivenuk@ucl.ac.uk</a><br>
+										Tel: 020 7679 9351
+									</p>
+									<!-- <form method="post" action="#">
+										<div class="row gtr-uniform">
+											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
+											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" class="primary" value="Send Message" /></li>
+													<li><input type="reset" value="Reset Form" /></li>
+												</ul>
+											</div>
+										</div>
+									</form> -->
+								</div>
+							</section>
+
+
+							<!-- Trial information -->
+								<section id="trial-info">
+									<div class="container">
+										<h3>Trial Information</h3>
+										<p>
+											REC Reference: 322127<br>
+											Clinical Trials Unit: Comprehensive Clinical Trials Unit at UCL<br>
+											Sponsor: University College London<br>
+											Funder: NIHR Health Technology Assessment<br>
+											Recruitment Target: 100<br>
+											Duration of Study: March 2023 – February 2029<br>
+										</p>
+									</div>
+								</section>
+
+
+                <!-- Healthcare professionals -->
+  								<section id="healthcare-prof">
+  									<div class="container">
+  										<h3>Information for Healthcare Professionals</h3>
+  										<p>This section is for healthcare professionals involved in the ENLIVEN-UK trial.</p>
+
+  											<h4>Trial Design</h4>
+  											<p>The ENLIVEN-UK trial is a phase III, multi-centre, randomised, assessor-blinded, controlled trial of NEL with temporising device (intervention Arm A) vs temporising device alone (standard treatment/Control Arm B). The aim of this trial is to investigate whether the addition of NEL to the standard procedure of inserting a temporary cerebrospinal fluid (CSF) drainage device will improve children's development at 2 years of age.</p>
+  											<p>A computer-generated randomisation sequence, will be used to assign the participants to one of the two treatment arms using a 1:1 ratio.</p>
+  											<p>All infants in Arms A and B will be followed-up until they reach 2 years corrected age (+/-2 months). At this time, they will undergo a developmental assessment performed by qualified and validated independent clinical development specialist, blinded to the treatment arm.</p>
+
+  											<h4>Inclusion Criteria</h4>
+  											<ol>
+  												<li>Premature infants born before 37 weeks of gestational age</li>
+  												<li>IVH: Papile Grades II-IV on cranial ultrasound scan</li>
+  												<li>PHVD: Ventricular index at or beyond the threshold point of the 97th centile for gestational age plus 4 mm on the Levene chart despite 2 attempted lumbar or ventricular punctures.</li>
+  											</ol>
+
+  											<h4>Exclusion Criteria</h4>
+  											<ol>
+  												<li>Infants with coagulopathy (INR >1.6) or platelet disorders (platelet count under 80,000/mL) that persist on attempted correction. Clinical judgement will be made by the Investigator. </li>
+  												<li>Infants deemed too unstable for neurosurgical intervention. This is a clinical judgement made by the responsible neurosurgeon, neonatologist and anaesthetic team.</li>
+  												<li>Parents or carers unwilling to provide informed consent.</li>
+  											</ol>
+
+  											<h4>Primary Outcomes</h4>
+  											<p>Cognitive Quotient (CQ) measured by the Bayley Scales of Infant and Toddler Development Fourth Edition (Bayley IV) at 2 years' corrected age (+/- 2 months).</p>
+
+  											<h4>Secondary Outcomes</h4>
+  											<ol>
+  											   <li>
+  											      Developmental Measures:
+  											      <ol type="a">
+  											         <li>Motor quotient (MQ): Age equivalent motor score of the Bayley IV divided by corrected age at assessment, measured at 2 years' corrected age</li>
+  											         <li>Language quotient (LQ): Age equivalent language score of the Bayley IV divided by corrected age at assessment, measured at 2 years' corrected age</li>
+  											      </ol>
+  											   </li>
+  											   <li>
+  											      Other neurological and functional assessments conducted during the 2-year follow-up visit:
+  											      <ol type="a">
+  											         <li>Presence of seizures during the first 2 years and use of anticonvulsant medication at 2 years.</li>
+  											         <li>Presence of cerebral palsy (+ accompanying Gross Motor Function Classification System (GMFCS) grade and deficit distribution map using the Classification of SCPE</li>
+  											         <li>Assessment of hearing and vision (British Association of Perinatal Medicine classification)</li>
+  											         <li>
+  											            Parent report:
+  											            <ol type="i">
+  											               <li>Brief Infant Toddler Social Emotional Assessment (BITSEA)</li>
+  											               <li>Quantitative Checklist for Autism in Toddlers (Q-CHAT)</li>
+  											            </ol>
+  											         </li>
+  														 </ol>
+  															</li>
+  											         <li>Mortality up to 2 years corrected age.</li>
+  											         <li>
+  											            NEL &amp; VP shunt related outcomes:
+  											            <ol type="a">
+  											               <li>Safety of NEL, measured by the number of Adverse Events reported</li>
+  											               <li>Number and type of further surgical procedures required until two years' corrected age.</li>
+  											               <li>Requirement for permanent VP shunt insertion at 6 months' corrected age.</li>
+  											            </ol>
+  											         </li>
+  											         <li>
+  											            Quality of life and health economic assessments:
+  											            <ol type="a">
+  											               <li>Health-Related Quality of Life (HRQoL) in children using the TNO-AZL Preschool Children's Quality of Life (TAPQOL) to be assessed at 12-months and 2 years' corrected age</li>
+  											               <li>HRQoL in primary caregiver using the EuroQoL EQ-5D-5L to be assessed at baseline, 6 months, 12 months- and 2 years' corrected age</li>
+  											               <li>Healthcare resource use costs (CSRI (adapted) children version) at 3-6-,12-, 18- months and 2 years' corrected age.</li>
+  											               <li>Subsequent cost-effectiveness analysis &amp; cost-benefit analysis of impact on carers based on responses to the EQ-5D-5L.</li>
+  											            </ol>
+  											         </li>
+  											      </ol>
+                            <h4>Study visit summary</h4>
+                            <img src="images/visit-summary.png" alt="Participant visit flow diagram" />
+  									</div>
+  								</section>
+
+
+									<!--
+									<section>
+										<h4>Lists</h4>
+										<div class="row">
+											<div class="col-6 col-12-xsmall">
+												<h5>Unordered</h5>
+												<ul>
+													<li>Dolor pulvinar etiam magna etiam.</li>
+													<li>Sagittis adipiscing lorem eleifend.</li>
+													<li>Felis enim feugiat dolore viverra.</li>
+												</ul>
+												<h5>Alternate</h5>
+												<ul class="alt">
+													<li>Dolor pulvinar etiam magna etiam.</li>
+													<li>Sagittis adipiscing lorem eleifend.</li>
+													<li>Felis enim feugiat dolore viverra.</li>
+												</ul>
+											</div>
+											<div class="col-6 col-12-xsmall">
+												<h5>Ordered</h5>
+												<ol>
+													<li>Dolor pulvinar etiam magna etiam.</li>
+													<li>Etiam vel felis at lorem sed viverra.</li>
+													<li>Felis enim feugiat dolore viverra.</li>
+													<li>Dolor pulvinar etiam magna etiam.</li>
+													<li>Etiam vel felis at lorem sed viverra.</li>
+													<li>Felis enim feugiat dolore viverra.</li>
+												</ol>
+												<h5>Icons</h5>
+												<ul class="icons">
+													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+													<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+													<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+												</ul>
+											</div>
+										</div>
+										<h5>Actions</h5>
+										<ul class="actions">
+											<li><a href="#" class="button primary">Default</a></li>
+											<li><a href="#" class="button">Default</a></li>
+											<li><a href="#" class="button alt">Default</a></li>
+										</ul>
+										<ul class="actions small">
+											<li><a href="#" class="button primary small">Small</a></li>
+											<li><a href="#" class="button small">Small</a></li>
+											<li><a href="#" class="button alt small">Small</a></li>
+										</ul>
+										<div class="row">
+											<div class="col-3 col-6-medium col-12-xsmall">
+												<ul class="actions stacked">
+													<li><a href="#" class="button primary">Default</a></li>
+													<li><a href="#" class="button">Default</a></li>
+													<li><a href="#" class="button alt">Default</a></li>
+												</ul>
+											</div>
+											<div class="col-3 col-6 col-12-xsmall">
+												<ul class="actions stacked">
+													<li><a href="#" class="button primary small">Small</a></li>
+													<li><a href="#" class="button small">Small</a></li>
+													<li><a href="#" class="button alt small">Small</a></li>
+												</ul>
+											</div>
+											<div class="col-3 col-6-medium col-12-xsmall">
+												<ul class="actions stacked">
+													<li><a href="#" class="button primary fit">Default</a></li>
+													<li><a href="#" class="button fit">Default</a></li>
+													<li><a href="#" class="button alt fit">Default</a></li>
+												</ul>
+											</div>
+											<div class="col-3 col-6-medium col-12-xsmall">
+												<ul class="actions stacked">
+													<li><a href="#" class="button primary small fit">Small</a></li>
+													<li><a href="#" class="button small fit">Small</a></li>
+													<li><a href="#" class="button alt small fit">Small</a></li>
+												</ul>
+											</div>
+										</div>
+									</section>
+
+									<section>
+										<h4>Table</h4>
+										<h5>Default</h5>
+										<div class="table-wrapper">
+											<table>
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>Description</th>
+														<th>Price</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Item One</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Two</td>
+														<td>Vis ac commodo adipiscing arcu aliquet.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Three</td>
+														<td> Morbi faucibus arcu accumsan lorem.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Four</td>
+														<td>Vitae integer tempus condimentum.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Five</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+												</tbody>
+												<tfoot>
+													<tr>
+														<td colspan="2"></td>
+														<td>100.00</td>
+													</tr>
+												</tfoot>
+											</table>
+										</div>
+
+										<h5>Alternate</h5>
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>Description</th>
+														<th>Price</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Item One</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Two</td>
+														<td>Vis ac commodo adipiscing arcu aliquet.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Three</td>
+														<td> Morbi faucibus arcu accumsan lorem.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Four</td>
+														<td>Vitae integer tempus condimentum.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Five</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+												</tbody>
+												<tfoot>
+													<tr>
+														<td colspan="2"></td>
+														<td>100.00</td>
+													</tr>
+												</tfoot>
+											</table>
+										</div>
+									</section>
+
+									<section>
+										<h4>Buttons</h4>
+										<ul class="actions">
+											<li><a href="#" class="button primary">Primary</a></li>
+											<li><a href="#" class="button">Default</a></li>
+											<li><a href="#" class="button alt">Alternate</a></li>
+										</ul>
+										<ul class="actions">
+											<li><a href="#" class="button primary large">Large</a></li>
+											<li><a href="#" class="button">Default</a></li>
+											<li><a href="#" class="button alt small">Small</a></li>
+										</ul>
+										<ul class="actions fit">
+											<li><a href="#" class="button primary fit">Fit</a></li>
+											<li><a href="#" class="button fit">Fit</a></li>
+											<li><a href="#" class="button alt fit">Fit</a></li>
+										</ul>
+										<ul class="actions fit small">
+											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
+											<li><a href="#" class="button fit small">Fit + Small</a></li>
+											<li><a href="#" class="button alt fit small">Fit + Small</a></li>
+										</ul>
+										<ul class="actions">
+											<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+											<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+											<li><a href="#" class="button alt icon solid fa-check">Icon</a></li>
+										</ul>
+										<ul class="actions">
+											<li><span class="button primary disabled">Primary</span></li>
+											<li><span class="button disabled">Default</span></li>
+											<li><span class="button alt disabled">Alternate</span></li>
+										</ul>
+									</section>
+
+									<section>
+										<h4>Form</h4>
+										<form method="post" action="#">
+											<div class="row gtr-uniform">
+												<div class="col-6 col-12-xsmall">
+													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+												</div>
+												<div class="col-6 col-12-xsmall">
+													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+												</div>
+												<div class="col-12">
+													<select name="demo-category" id="demo-category">
+														<option value="">- Category -</option>
+														<option value="1">Manufacturing</option>
+														<option value="1">Shipping</option>
+														<option value="1">Administration</option>
+														<option value="1">Human Resources</option>
+													</select>
+												</div>
+												<div class="col-4 col-12-medium">
+													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+													<label for="demo-priority-low">Low Priority</label>
+												</div>
+												<div class="col-4 col-12-medium">
+													<input type="radio" id="demo-priority-normal" name="demo-priority">
+													<label for="demo-priority-normal">Normal Priority</label>
+												</div>
+												<div class="col-4 col-12-medium">
+													<input type="radio" id="demo-priority-high" name="demo-priority">
+													<label for="demo-priority-high">High Priority</label>
+												</div>
+												<div class="col-6 col-12-medium">
+													<input type="checkbox" id="demo-copy" name="demo-copy">
+													<label for="demo-copy">Email me a copy of this message</label>
+												</div>
+												<div class="col-6 col-12-medium">
+													<input type="checkbox" id="demo-human" name="demo-human" checked>
+													<label for="demo-human">I am a human and not a robot</label>
+												</div>
+												<div class="col-12">
+													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><input type="submit" value="Send Message" /></li>
+														<li><input type="reset" value="Reset" class="alt" /></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+									</section>
+
+									<section>
+										<h4>Image</h4>
+										<h5>Fit</h5>
+										<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
+										<div class="box alt">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+											</div>
+										</div>
+										<h5>Left &amp; Right</h5>
+										<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+										<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+									</section>
+
+								</div>
+							</section>
+						-->
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>Created: <a href="https://profiles.ucl.ac.uk/40429-andrew-embletonthirsk" target="_blank">Andrew Embleton-Thirsk</a> (2024)</li><li>Design: <a href="https://html5up.net/" target="_blank">HTML5 UP</a></li><li>Banner image: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
