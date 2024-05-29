@@ -5,3 +5,6 @@
 # general resources folder and folder used to link to documents via a OneDrive share
 /other-resources/
 /documents-to-share/
+
+# show/hide the testing directory
+/testing/
