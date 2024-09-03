@@ -218,6 +218,8 @@
 									<p>Mr Kristian Aquilina: <a href="mailto:kristian.aquilina@gosh.nhs.uk">kristian.aquilina@gosh.nhs.uk</a></p>
 									<h4>Alder Hey Children's Hospital, Liverpool</h4>
 									<p>Ms Benedetta Pettorini: <a href="mailto:benedetta.pettorini@alderhey.nhs.uk">benedetta.pettorini@alderhey.nhs.uk</a></p>
+									<h4>Bristol Royal Hospital for Children</h4>
+									<p><em>Contact details available on request</em></p>
 							    <div id="map"></div>
 									<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 									<script>
@@ -229,8 +231,10 @@
 										L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
 										const marker1 = L.marker([51.522090, -0.119933]).bindPopup('Great Ormond Street Hospital (GOSH)').addTo(map);
 										const marker2 = L.marker([53.41951, -2.89694]).bindPopup('Alder Hey Children’s Hospital').addTo(map);
+										const marker3 = L.marker([51.457747, -2.597298]).bindPopup('Bristol Royal Hospital for Children').addTo(map);
 										marker1._icon.style.filter = "hue-rotate(313deg)"
 										marker2._icon.style.filter = "hue-rotate(313deg)"
+										marker3._icon.style.filter = "hue-rotate(313deg)"
 									</script>
 									</div>
 								</section>
